@@ -19,11 +19,6 @@ resource:
   permission:
     tool:
       enabled: true
-authorization:
-  type: api_key
-  field_name: API_KEY
-  label: API Key
-  help: 请输入您的 API Key
 plugins:
   tools:
     - provider/fetch_imap_emails.yaml

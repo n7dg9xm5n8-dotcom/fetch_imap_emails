@@ -5,6 +5,5 @@
 **Type:** tool
 
 ### Description
-
-
+Fetch recent emails via IMAP, return metadata/snippets, then delete them and clear the trash on the server.
 
