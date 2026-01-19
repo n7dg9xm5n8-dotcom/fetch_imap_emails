@@ -8,11 +8,11 @@ identity:
     ja_JP: "fetch_imap_emails"
 description:
   human:
-    en_US: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
-    zh_Hans: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
-    pt_BR: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
-    ja_JP: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
-  llm: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
+    en_US: "Fetch recent emails via IMAP, return metadata/snippets, then delete and clear trash"
+    zh_Hans: "通过IMAP拉取最近邮件，返回元数据与内容摘要，并在完成后删除邮件并清空回收站"
+    pt_BR: "Buscar emails recentes via IMAP, retornar metadados e limpar a lixeira"
+    ja_JP: "IMAPで最近のメールを取得し、内容を返して削除・ゴミ箱を空にします"
+  llm: "Fetch recent emails via IMAP, return metadata, then delete from server and clear trash"
   parameters:
     - name: config_name
       type: string
