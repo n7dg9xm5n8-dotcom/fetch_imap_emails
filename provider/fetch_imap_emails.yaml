@@ -11,7 +11,7 @@ identity:
     zh_Hans: "通过IMAP拉取最近邮件，返回元数据与内容摘要，并在完成后删除邮件并清空回收站"
     pt_BR: "Buscar emails recentes via IMAP, retornar metadados e limpar a lixeira"
     ja_JP: "IMAPで最近のメールを取得し、内容を返して削除・ゴミ箱を空にします"
-  icon: "_assets/icon.svg"
+  icon: "icon.svg"
 
 # Provider-level credentials (global defaults).
 # Adding this section makes Dify show the "Authorize / Configure" button.

@@ -101,6 +101,7 @@ class FetchImapEmailsTool(Tool):
             mail.login(config.email_account, config.email_password)
             mail.select("INBOX")
             _, data = mail.search(None, "ALL")
+
             if not data or data[0] is None:
                 mail_ids = []
             else:

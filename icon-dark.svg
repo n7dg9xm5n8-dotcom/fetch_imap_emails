@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="IMAP fetch">
+  <defs>
+    <linearGradient id="mailGradientDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b1f3b"/>
+      <stop offset="100%" stop-color="#3b4b7a"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="48" width="224" height="160" rx="24" fill="url(#mailGradientDark)"/>
+  <path d="M32 72l96 72 96-72" fill="none" stroke="#e6f0ff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 184l64-56" fill="none" stroke="#e6f0ff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M224 184l-64-56" fill="none" stroke="#e6f0ff" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="200" cy="56" r="32" fill="#e6f0ff"/>
+  <path d="M200 40v20l12 12" fill="none" stroke="#1b1f3b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
