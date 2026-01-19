@@ -101,7 +101,11 @@ class FetchImapEmailsTool(Tool):
             mail.login(config.email_account, config.email_password)
             mail.select("INBOX")
             _, data = mail.search(None, "ALL")
-            mail_ids = data[0].split()
+
+            if not data or data[0] is None:
+                mail_ids = []
+            else:
+                mail_ids = data[0].split()
             target_ids = list(reversed(mail_ids[-config.recent_count :]))
 
             for mail_id in target_ids:
@@ -154,7 +158,7 @@ class FetchImapEmailsTool(Tool):
         return payload.decode(charset, errors="ignore")
 
     def _empty_trash(self, mail: imaplib.IMAP4_SSL) -> bool:
-        mailboxes = mail.list()[1]
+        _, mailboxes = mail.list()
         trash_folder = self._find_trash_folder(mailboxes)
         if not trash_folder:
             return False

@@ -12,8 +12,8 @@ description:
   ja_JP: Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets
   zh_Hans: Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets
   pt_BR: Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets
-icon: icon.svg
-icon_dark: icon-dark.svg
+icon: _assets/icon.svg
+icon_dark: _assets/icon-dark.svg
 resource:
   memory: 268435456
   permission:
