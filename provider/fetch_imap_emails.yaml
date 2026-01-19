@@ -1,0 +1,117 @@
+identity:
+  author: "lyh"
+  name: "fetch_imap_emails"
+  label:
+    en_US: "fetch_imap_emails"
+    zh_Hans: "fetch_imap_emails"
+    pt_BR: "fetch_imap_emails"
+    ja_JP: "fetch_imap_emails"
+  description:
+    en_US: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
+    zh_Hans: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
+    pt_BR: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
+    ja_JP: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
+  icon: "icon.svg"
+
+# Provider-level credentials (global defaults).
+# Adding this section makes Dify show the "Authorize / Configure" button.
+credentials_for_provider:
+  config_name:
+    type: text-input
+    required: true
+    label:
+      zh_Hans: 名称
+      en_US: Name
+    placeholder:
+      zh_Hans: 例如：公司邮箱
+      en_US: e.g. Work mailbox
+  email_account:
+    type: text-input
+    required: true
+    label:
+      zh_Hans: 邮件账号
+      en_US: Email Account
+    placeholder:
+      zh_Hans: 例如：user@example.com
+      en_US: e.g. user@example.com
+  email_password:
+    type: secret-input
+    required: true
+    label:
+      zh_Hans: 邮件密码
+      en_US: Email Password
+  imap_server:
+    type: text-input
+    required: true
+    label:
+      zh_Hans: 收信IMAP服务器地址
+      en_US: IMAP Server Address
+    placeholder:
+      zh_Hans: 例如：imap.example.com
+      en_US: e.g. imap.example.com
+  imap_port:
+    type: number
+    required: true
+    label:
+      zh_Hans: 收信IMAP服务器端口
+      en_US: IMAP Server Port
+    placeholder:
+      zh_Hans: 例如：993
+      en_US: e.g. 993
+  recent_count:
+    type: number
+    required: true
+    label:
+      zh_Hans: 最近的邮件(几封)
+      en_US: Recent Email Count
+    placeholder:
+      zh_Hans: 例如：5
+      en_US: e.g. 5
+
+#########################################################################################
+# If you want to support OAuth, you can uncomment the following code.
+#########################################################################################
+# oauth_schema:
+#   client_schema:
+#     - name: "client_id"
+#       type: "secret-input"
+#       required: true
+#       url: https://example.com/oauth/authorize
+#       placeholder:
+#         en_US: "Please input your Client ID"
+#         zh_Hans: "请输入你的 Client ID"
+#         pt_BR: "Insira seu Client ID"
+#       help:
+#         en_US: "Client ID is used to authenticate requests to the example.com API."
+#         zh_Hans: "Client ID 用于认证请求到 example.com API。"
+#         pt_BR: "Client ID é usado para autenticar solicitações à API do example.com."
+#       label:
+#         zh_Hans: "Client ID"
+#         en_US: "Client ID"
+#     - name: "client_secret"
+#       type: "secret-input"
+#       required: true
+#       url: https://example.com/oauth/authorize
+#       placeholder:
+#         en_US: "Please input your Client Secret"
+#         zh_Hans: "请输入你的 Client Secret"
+#         pt_BR: "Insira seu Client Secret"
+#       help:
+#         en_US: "Client Secret is used to authenticate requests to the example.com API."
+#         zh_Hans: "Client Secret 用于认证请求到 example.com API。"
+#         pt_BR: "Client Secret é usado para autenticar solicitações à API do example.com."
+#       label:
+#         zh_Hans: "Client Secret"
+#         en_US: "Client Secret"
+#   credentials_schema:
+#     - name: "access_token"
+#       type: "secret-input"
+#       label:
+#         zh_Hans: "Access Token"
+#         en_US: "Access Token"
+
+tools:
+  - tools/fetch_imap_emails.yaml
+extra:
+  python:
+    source: provider/fetch_imap_emails.py
