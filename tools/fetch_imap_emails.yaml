@@ -1,0 +1,109 @@
+identity:
+  name: "fetch_imap_emails"
+  author: "lyh"
+  label:
+    en_US: "fetch_imap_emails"
+    zh_Hans: "fetch_imap_emails"
+    pt_BR: "fetch_imap_emails"
+    ja_JP: "fetch_imap_emails"
+description:
+  human:
+    en_US: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
+    zh_Hans: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
+    pt_BR: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
+    ja_JP: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
+  llm: "Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets"
+  parameters:
+    - name: config_name
+      type: string
+      required: false
+      label:
+        en_US: Name
+        zh_Hans: 名称
+        pt_BR: Nome
+        ja_JP: 名前
+      human_description:
+        en_US: "Optional. Override the provider configured name for this node"
+        zh_Hans: "可选：覆盖授权配置里的名称（仅当前节点）"
+        pt_BR: "Opcional. Sobrescrever o nome configurado no provedor"
+        ja_JP: "任意。プロバイダー設定の名前をこのノードで上書き"
+      llm_description: "Optional name label for this mailbox config"
+      form: text
+    - name: email_account
+      type: string
+      required: false
+      label:
+        en_US: Email Account
+        zh_Hans: 邮箱账号
+        pt_BR: Conta de Email
+        ja_JP: メールアカウント
+      human_description:
+        en_US: "Your email account address"
+        zh_Hans: "你的邮箱账号"
+        pt_BR: "Seu endereço de email"
+        ja_JP: "メールアカウントアドレス"
+      llm_description: "Email account address"
+      form: text
+    - name: email_password
+      type: string
+      required: false
+      label:
+        en_US: Email Password
+        zh_Hans: 邮箱密码
+        pt_BR: Senha do Email
+        ja_JP: メールパスワード
+      human_description:
+        en_US: "Your email account password"
+        zh_Hans: "你的邮箱密码"
+        pt_BR: "Sua senha de email"
+        ja_JP: "メールアカウントのパスワード"
+      llm_description: "Email account password"
+      form: secret
+    - name: imap_server
+      type: string
+      required: false
+      label:
+        en_US: IMAP Server Address
+        zh_Hans: IMAP服务器地址
+        pt_BR: Endereço do servidor IMAP
+        ja_JP: IMAPサーバーアドレス
+      human_description:
+        en_US: "IMAP server address for receiving emails"
+        zh_Hans: "收信IMAP服务器地址"
+        pt_BR: "Endereço do servidor IMAP para recebimento de emails"
+        ja_JP: "メール受信用IMAPサーバーアドレス"
+      llm_description: "IMAP server address"
+      form: text
+    - name: imap_port
+      type: integer
+      required: false
+      label:
+        en_US: IMAP Server Port
+        zh_Hans: IMAP服务器端口
+        pt_BR: Porta do servidor IMAP
+        ja_JP: IMAPサーバーポート
+      human_description:
+        en_US: "IMAP server port for receiving emails"
+        zh_Hans: "收信IMAP服务器端口"
+        pt_BR: "Porta do servidor IMAP para recebimento de emails"
+        ja_JP: "メール受信用IMAPサーバーポート"
+      llm_description: "IMAP server port"
+      form: number
+    - name: recent_count
+      type: integer
+      required: false
+      label:
+        en_US: Recent Email Count
+        zh_Hans: 最近邮件数
+        pt_BR: Quantidade de emails recentes
+        ja_JP: 最近のメール数
+      human_description:
+        en_US: "Number of recent emails to fetch"
+        zh_Hans: "拉取最近的邮件数量"
+        pt_BR: "Número de emails recentes para buscar"
+        ja_JP: "取得する最近のメール数"
+      llm_description: "Number of recent emails to fetch"
+      form: number
+extra:
+  python:
+    source: tools/fetch_imap_emails.py
