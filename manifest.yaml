@@ -1,0 +1,42 @@
+version: 0.0.1
+type: plugin
+author: lyh
+name: fetch_imap_emails
+label:
+  en_US: fetch_imap_emails
+  ja_JP: fetch_imap_emails
+  zh_Hans: fetch_imap_emails
+  pt_BR: fetch_imap_emails
+description:
+  en_US: Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets
+  ja_JP: Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets
+  zh_Hans: Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets
+  pt_BR: Fetch emails from a remote IMAP mailbox and return basic metadata and content snippets
+icon: icon.svg
+icon_dark: icon-dark.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+authorization:
+  type: api_key
+  field_name: API_KEY
+  label: API Key
+  help: 请输入您的 API Key
+plugins:
+  tools:
+    - provider/fetch_imap_emails.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2026-01-19T14:36:27.1334096+08:00
+privacy: PRIVACY.md
+verified: false
